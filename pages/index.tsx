@@ -12,9 +12,8 @@ import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSocial } from "../utils/fetchSocials";
-import Link from "next/link";
+
 import Logo from "../components/Logo";
-import Head from "next/head";
 
 type Props = {
   pageInfo: PageInfo;
@@ -27,14 +26,6 @@ type Props = {
 const Home = ({ projects, skills, pageInfo, experiences, socials }: Props) => {
   return (
     <div className="snap-y overflow-x-hidden snap-mandatory h-screen overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#ff5800]/80 bg-[rgb(36,36,36)] text-white z-0">
-      {/* <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
-      </Head> */}
       <Header socials={socials} />
 
       {/* Hero Banner Section */}
@@ -95,9 +86,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       socials,
     },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 seconds
+
     revalidate: 10,
   };
 };
