@@ -25,47 +25,7 @@ type Props = {
 
 const Home = ({ projects, skills, pageInfo, experiences, socials }: Props) => {
   return (
-    <div className="snap-y overflow-x-hidden snap-mandatory h-screen overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#ff5800]/80 bg-[rgb(36,36,36)] text-white z-0">
-      <Header socials={socials} />
-
-      {/* Hero Banner Section */}
-      <section id="hero" className="snap-start">
-        <Hero pageInfo={pageInfo} />
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="snap-center">
-        <About pageInfo={pageInfo} />
-      </section>
-
-      {/* Experience Section */}
-      <section id="experience" className="snap-center">
-        <WorkExperience experiences={experiences} />
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="snap-start">
-        <Skills skills={skills} />
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="snap-start">
-        <Projects projects={projects} />
-      </section>
-
-      {/* Contact Me Section */}
-      <section id="contact" className="snap-start">
-        <ContactMe pageInfo={pageInfo} />
-      </section>
-
-      <footer className="sticky bottom-0 md:bottom-4 w-full ">
-        <div className="flex items-center justify-center">
-          {/* <Link className="cursor-pointer" href="#hero"> */}
-          <Logo link="#hero" className="w-32 cursor-pointer" />
-          {/* </Link> */}
-        </div>
-      </footer>
-    </div>
+    <div className="snap-y overflow-x-hidden snap-mandatory h-screen overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#ff5800]/80 bg-[rgb(36,36,36)] text-white z-0"></div>
   );
 };
 
