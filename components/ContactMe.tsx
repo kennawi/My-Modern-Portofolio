@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import { PageInfo } from "../typings";
 import { useForm, SubmitHandler } from "react-hook-form";
+import Link from "next/link";
 
 type Props = {
   pageInfo: PageInfo;
@@ -49,12 +50,12 @@ function ContactMe({ pageInfo }: Props) {
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#ff5800]  h-4 w-4 md:h-7 md:w-7 animate-pulse" />
-            <a
+            <Link
               className="text-sm md:text-2xl"
               href={`mailto:${pageInfo?.email}`}
             >
               {pageInfo?.email}
-            </a>
+            </Link>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-[#ff5800] h-4 w-4 md:h-7 md:w-7 animate-pulse" />
